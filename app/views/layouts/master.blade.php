@@ -57,6 +57,7 @@
                                 <li style="text-align: center;"><a><b>AKADEMIK</b></a></a></li>
                                 <li><a href="{{URL::to('master/takad')}}">Tahun Akademik</a></li>
                                 <li><a href="{{URL::to('master/semester')}}">Semester</a></li>
+                                <li><a href="{{URL::to('master/ruang')}}">Ruang</a></li>
                                 <li><a href="{{URL::to('master/jenjang')}}">Jenjang</a></li>
                                 <!--<li><a href="{{URL::to('master/fakultas')}}">Fakultas</a></li>-->
                                 <li><a href="{{URL::to('master/prodi')}}">Program Studi</a></li>
@@ -68,8 +69,12 @@
                                 <li><a href="{{URL::to('master/gapok')}}">Gaji Pokok</a></li>
                                 <li><a href="{{URL::to('master/tunjangan')}}">Tunjangan</a></li>
                                 <li><a href="{{URL::to('master/pegawai')}}">Pegawai</a></li>
-                                <li style="text-align: center;"><a><b>LAIN</b></a></a></li>
-                                <li><a href="{{URL::to('master/ruang')}}">Ruang</a></li>
+                                <li style="text-align: center;"><a><b>ADMINISTRASI</b></a></a></li>
+                                <li><a href="{{URL::to('master/biaya')}}">Biaya</a></li>
+                                <li><a href="{{URL::to('master/biaya/atur')}}">Pengaturan Biaya</a></li>
+                                <li style="text-align: center;"><a><b>SYSTEM</b></a></a></li>
+                                <li><a href="{{URL::to('master/group')}}">Group</a></li>
+                                <li><a href="{{URL::to('master/user')}}">User</a></li>
 
                             </ul>
                         </li>
@@ -97,18 +102,16 @@
                                 <li><a href="{{URL::to('akademik/penilaian')}}">Penilaian</a></li>
                                 <li><a href="{{URL::to('akademik/krs')}}">KRS</a></li>
                                 <li><a href="{{URL::to('akademik/khs')}}">KHS</a></li>
-                                <li><a href="{{URL::to('akademik/khs')}}">Pendaftaran Kerja Praktek</a></li>
-                                <li><a href="{{URL::to('akademik/khs')}}">Pendaftaran Tugas Akhir</a></li>
-                                <li><a href="{{URL::to('akademik/khs')}}">Pendaftaran Wisuda</a></li>
+                                <li><a href="{{URL::to('akademik/ips')}}">Index Prestasi Mahasiswa</a></li>
+                                <li><a href="{{URL::to('akademik/pkp')}}">Kerja Praktek</a></li>
+                                <li><a href="{{URL::to('akademik/pta')}}">Tugas Akhir</a></li>
+                                <li><a href="{{URL::to('akademik/wisuda')}}">Wisuda</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-envelope"></i><span>Administrasi</span> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{URL::to('master/takad')}}">Jadwal Kuliah</a></li>
-                                <li><a href="{{URL::to('akademik/absensi')}}">Absensi</a></li>
-                                <li><a href="{{URL::to('akademik/penilaian')}}">Penilaian</a></li>
-                                <li><a href="{{URL::to('akademik/krs')}}">KRS</a></li>
-                                <li><a href="{{URL::to('akademik/khs')}}">KHS</a></li>
+                                <li><a href="{{URL::to('administrasi/pembayaran')}}">Pembayaran Mahasiswa</a></li>
+                                <li><a href="{{URL::to('administrasi/pembayaran/rekap')}}">Rekapitulasi Pembayaran</a></li>
                             </ul>
                         </li>                        
                         <li></li>
@@ -172,4 +175,47 @@ jQuery(document).ready(function() {
     })();
 });
     </script>
+    <script>
+		function lineChart(){
+			var lineChartData = {
+            labels: ["01001", "01002", "01101", "01102", "01201", "01202", "01301","01302"],
+            datasets: [
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [2.5, 2.8, 2.9, 3.1, 3.3, 3.3, 3.5,3.4]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [3, 3.4, 3.0, 3.1, 3.3, 3.3, 3.5,3.4]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [2.5, 2.8, 2.9, 3.1, 3.3, 3.3, 3.5,3.4]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [2.5, 2.8, 2.9, 3.1, 3.3, 3.3, 3.5,3.4]
+				}
+			]
+
+        }
+
+        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
+			
+		};
+
+        lineChart();
+</script>
 </html>

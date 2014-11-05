@@ -9,15 +9,9 @@
         <!-- /widget-header -->
         <div class="widget-content">
             <div class="shortcuts"> 
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label">Master</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label">Apps</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-bookmark"></i><span class="shortcut-label">Bookmarks</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-signal"></i> <span class="shortcut-label">Reports</span> </a>
-                <a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-comment"></i><span class="shortcut-label">Comments</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-user"></i><span class="shortcut-label">Users</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-file"></i><span class="shortcut-label">Notes</span> </a>
-                <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-picture"></i> <span class="shortcut-label">Photos</span> </a>
-                <a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-tag"></i><span class="shortcut-label">Tags</span> </a> </div>
+                <a href="{{URL::to('mater/takad')}}" class="shortcut"><i class="shortcut-icon icon-calendar"></i><span class="shortcut-label">Tahun Akademik</span> </a>
+                <a href="{{URL::to('mater/ruang')}}" class="shortcut"><i class="shortcut-icon icon-home"></i><span class="shortcut-label">Ruangan</span> </a>
+                <a href="{{URL::to('master/mahasiswa')}}" class="shortcut"><i class="shortcut-icon icon-user"></i><span class="shortcut-label">Mahasiswa</span> </a>
 
             <!-- /shortcuts --> 
         </div>

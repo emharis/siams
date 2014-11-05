@@ -34,6 +34,9 @@ Route::group(array('prefix' => 'master'), function() {
 	Route::controller('tunjangan', 'App\Controllers\TunjanganController');
     Route::controller('departemen', 'App\Controllers\DepartemenController');
     Route::controller('ruang', 'App\Controllers\RuangController');
+    Route::controller('group', 'App\Controllers\GroupController');
+    Route::controller('user', 'App\Controllers\UserController');
+    Route::controller('biaya', 'App\Controllers\BiayaController');
 });
 
 //pmb group controller
@@ -50,6 +53,16 @@ Route::group(array('prefix' => 'akademik'), function() {
     Route::controller('penilaian', 'App\Controllers\PenilaiankulController');
     Route::controller('absensi', 'App\Controllers\AbsensiController');
     Route::controller('krs', 'App\Controllers\KrsController');
+    Route::controller('khs', 'App\Controllers\KhsController');
+    Route::controller('pkp', 'App\Controllers\PkpController');
+    Route::controller('pta', 'App\Controllers\PtaController');
+    Route::controller('ips', 'App\Controllers\IpsController');
+    Route::controller('wisuda', 'App\Controllers\WisudaController');
+});
+
+//administrasi group controller
+Route::group(array('prefix' => 'administrasi'), function() {
+    Route::controller('pembayaran', 'App\Controllers\PembayaranController');
 });
 
 //pegawai group controller

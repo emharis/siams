@@ -999,6 +999,9 @@ table {
 	vertical-align: top;
 	border-top: 1px solid #dddddd;
 }
+.table td.number{
+	text-align: right;
+}
 .table th {
 	font-weight: bold;
 }

@@ -20,7 +20,7 @@
 	<img src="login/images/logo-min.png" width="30%" />
   </div>
   
-  <h2 style="text-align:center;">Selamat Datang</h2>
+  <h2 style="text-align:center;">SELAMAT DATANG</h2>
   <h2 style="text-align:center;" >SIAM BAAK - STKW SURABAYA</h2>
   
   {{Form::open(array('url'=>URL::to('home/login')))}}

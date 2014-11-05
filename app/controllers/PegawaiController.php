@@ -2,7 +2,8 @@
 
 namespace App\Controllers;
 
-class PegawaiController extends \BaseController{
+class PegawaiController extends \BaseController
+{
 
 	/*
 	|--------------------------------------------------------------------------
@@ -17,14 +18,23 @@ class PegawaiController extends \BaseController{
 	|
 	*/
 
-	public function getIndex(){
+	public function getIndex()
+	{
 		$pegs = \App\Models\Pegawai::all();
 		return \View::make('master.pegawai.index',array(
-		'pegs'=>$pegs
-		));
+				'pegs'=>$pegs
+			));
 	}
-	public function getNew(){
+	public function getNew()
+	{
 		return \View::make('master.pegawai.new');
+	}
+
+	public function getEdit($id)
+	{
+		return \View::make('master.pegawai.edit');
+
+
 	}
 
 }
